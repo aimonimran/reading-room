@@ -1,0 +1,16 @@
+.card {
+    border-radius: 5px;
+    text-align: center;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    transition: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+.card-body {
+  color: rgb(91, 87, 87);
+}
+
+.card:hover {
+  margin: -3px;
+}

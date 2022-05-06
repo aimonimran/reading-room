@@ -1,0 +1,15 @@
+.contact {
+    padding: 60px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-title {
+    color: #408000;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+.contact-body {
+    font-size: 17px;
+    color: rgb(103, 101, 101);
+}

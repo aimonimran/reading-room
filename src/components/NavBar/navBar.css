@@ -1,0 +1,32 @@
+.navbar {
+    background-color: rgba(0,0,0,0) !important;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+  }
+  
+.navbar-brand {
+  font-size: 1.6rem !important;
+  color: #408000 !important;
+  font-family: 'Lobster', cursive;
+  margin-left: 30px;
+} 
+  
+.navbar a {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  transform: 1s;
+}
+  
+.menu-active {
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+}
+
+.navbar-bars {
+  color: #408000;
+}
+
+/* .navbar-collapse {
+  background-color: #408000;
+} */

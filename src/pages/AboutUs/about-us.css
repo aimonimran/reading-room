@@ -1,0 +1,20 @@
+.about-us {
+    margin: 60px 55px 120px 55px;
+}
+
+.about-us-image {
+    width: 400px;
+    border: 7px solid #408000;
+    transition: 0.5s;
+}
+
+.about-us-title {
+    font-family: 'Lobster', cursive;
+    color: #408000; 
+    margin-top: 40px; 
+} 
+
+.about-us-paragraph-one, .about-us-paragraph-two  {
+    font-size: 20px;
+    color: rgb(103, 101, 101);
+}

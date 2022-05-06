@@ -1,0 +1,29 @@
+.form {
+    border: 2px solid #e6ffe6;
+    background-color: #e6ffe6;
+    color: #408000;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+.form .btn-submit {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #408000;
+    outline: 2px solid #408000;
+    outline-offset: 2px;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.8s;
+  }
+  
+.form .btn-submit:hover {
+    background-color: #fff;
+    color: #408000;
+    outline: 2px solid #fff;
+  }
