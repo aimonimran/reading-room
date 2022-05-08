@@ -1,107 +1,86 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './navBar.css';
 
-class NavBar extends Component {
-    render() { 
-        return (
-            <div className='nav-bg'>
-                <div className='row'>
-                    <div className='col-12 mx-auto'>
-                        <nav className="navbar navbar-expand-lg navbar-light">
-                            <Link className="navbar-brand" to="/">
-                               Reading Room
-                            </Link>
+const NavBar = () => {
+    const [showMediaIcons, setShowMediaIcons] = useState(false);
+    const [showCross, setShowCross] = useState(true);
 
-                            <button 
-                                className="navbar-toggler" 
-                                type="button" 
-                                data-toggle="collapse" 
-                                data-target="#navbarSupportedContent" 
-                                aria-controls="navbarSupportedContent" 
-                                aria-expanded="false" 
-                                aria-label="Toggle navigation"
-                            >
-                                <i className='fa fa-bars navbar-bars' style={{fontSize: '30px'}}></i>
-                            </button>
+    return ( 
+            <>            
+                <span className="nav-btn" id="nav-btn">
+                    <i onClick={() => setShowMediaIcons(!showMediaIcons)} className="fa fa-bars"></i>
+                </span>
 
-                            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
-                                    <li className="nav-item">
-                                        <NavLink 
-                                            activeClassName='menu-active'
-                                            className="nav-link active" 
-                                            style={{color: "white"}}
-                                            to="/"
-                                            exact
-                                        >
-                                            <i className="fa fa-home" aria-hidden="true"></i>
-                                            Home
-                                        </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink 
-                                            activeClassName='menu-active'
-                                            className="nav-link" 
-                                            style={{color: "white"}}
-                                            to="/about"
-                                        >
-                                            <i className="fa fa-address-card" aria-hidden="true"></i>
-                                            About
-                                        </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink 
-                                            activeClassName='menu-active'
-                                            className="nav-link" 
-                                            style={{color: "white"}}
-                                            to="/features"
-                                        >
-                                            <i className="fa fa-book" aria-hidden="true"></i>
-                                            Features
-                                        </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink 
-                                            activeClassName='menu-active'
-                                            className="nav-link" 
-                                            style={{color: "white"}}
-                                            to="/contact"
-                                        >
-                                            <i className="fa fa-phone" aria-hidden="true"></i>
-                                            Contact
-                                        </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink 
-                                            activeClassName='menu-active'
-                                            className="nav-link" 
-                                            style={{color: "white"}}
-                                            to="/login"
-                                        >
-                                            <i className="fa fa-sign-in" aria-hidden="true"></i>
-                                            Login
-                                        </NavLink>
-                                    </li>
-                                    <li className="nav-item">
-                                        <NavLink
-                                            activeClassName='menu-active'
-                                            className="nav-link" 
-                                            style={{color: "white"}}
-                                            to="/register"
-                                        >
-                                            <i className="fa fa-user-plus" aria-hidden="true"></i>
-                                            Register
-                                        </NavLink>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
+                <nav className={showMediaIcons ? "nav-items showNavItems" : "nav-items"} id="navbar">
+                    <div className="navbar-header">
+                        <span className={showMediaIcons ? "nav-close" : "nav-close"} id="nav-close">
+                            <i 
+                                onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}
+                                className="fa fa-close" 
+                            />
+                        </span>
                     </div>
-                </div>
-            </div>
-        );
-    }
+                    
+                    <ul className="nav-items">
+                        <li>
+                            <a 
+                                href="/" 
+                                exact 
+                                onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}
+                                className="nav-link"
+                            >   
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="/about" 
+                                onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}
+                                className="nav-link"
+                            >
+                                about
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                            href="/features" 
+                            onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}
+                            className="nav-link"
+                            >
+                                features
+                            </a>
+                        </li>
+                        <li onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}>
+                            <a
+                                href="/contact" 
+                                className="nav-link"
+                            >
+                                contact
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="/login" 
+                                onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}
+                                className="nav-link"
+                            >
+                                login
+                            </a>
+                        </li>
+                        <li>
+                            <a 
+                                href="/register" 
+                                onClick={() => {setShowCross(!showCross), setShowMediaIcons(!showMediaIcons)}}
+                                className="nav-link"
+                            >
+                                register
+                            </a>
+                        </li>
+                    </ul>
+            </nav>
+          </>
+     );
 }
  
 export default NavBar;
