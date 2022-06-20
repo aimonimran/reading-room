@@ -23,7 +23,8 @@
   }
   
 .form .btn-submit:hover {
-    background-color: #fff;
-    color: #408000;
-    outline: 2px solid #fff;
+  color: #fff;
+  border: 2px solid rgb(27, 161, 60);
+  background-color: rgb(27, 161, 60); 
+  outline: 2px solid rgb(27, 161, 60);
   }

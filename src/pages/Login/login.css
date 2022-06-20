@@ -1,0 +1,24 @@
+.login {
+    background-color: #e6ffe6;
+    padding: 30px;
+}
+
+.login-title {
+    font-family: 'Lobster', cursive;
+    color: #408000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    color: #408000;
+    margin-left: 5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.logo:hover {
+    color: rgb(27, 161, 60);
+}

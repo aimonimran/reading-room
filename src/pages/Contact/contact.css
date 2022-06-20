@@ -1,6 +1,7 @@
 .contact {
     padding: 60px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
 }
 
 .contact-title {
@@ -12,4 +13,17 @@
 .contact-body {
     font-size: 17px;
     color: rgb(103, 101, 101);
+}
+
+.socials {
+    width: 50%;
+    text-align: right;
+}
+
+/* ----------MEDIA QUERIES (MEDIUM DEVICES)---------- */
+@media screen and (max-width: 1024px) {
+    .socials {
+        width: 100%;
+        text-align: left;
+    }
 }

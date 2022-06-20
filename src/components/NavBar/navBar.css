@@ -6,7 +6,7 @@
     color: #408000;
     z-index: 2;
     cursor: pointer;
-    animation: bounce 2s ease infinite;
+    animation: bounce 3s ease infinite;
 }
 
 nav {

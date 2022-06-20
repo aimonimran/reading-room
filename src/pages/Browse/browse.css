@@ -1,0 +1,63 @@
+.browse {
+    background-color: #e6ffe6;
+    padding: 30px;
+}
+
+.browse-title {
+    font-family: 'Lobster', cursive;
+    color: #408000;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    color: #408000;
+    margin-left: 5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.logo:hover {
+    color: rgb(27, 161, 60);
+}
+
+.searching {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.searchbox {
+    width: 25%;
+}
+
+button.btn {
+    margin-left: 20px;
+    color: #fff;
+    border: 2px solid #408000;
+    background-color: #408000; 
+    outline: 2px solid #408000;
+    outline-offset: 3px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 4px 10px 4px 10px;
+    width: 50px;
+    border-radius: 100px;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button.btn:hover {
+    color: #fff;
+    border: 2px solid rgb(27, 161, 60);
+    background-color: rgb(27, 161, 60); 
+    outline: 2px solid rgb(27, 161, 60);
+    outline-offset: 5px;
+    font-weight: bold;
+}

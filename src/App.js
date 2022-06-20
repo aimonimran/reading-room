@@ -1,25 +1,22 @@
-import './App.css';
-import { Switch, Route } from 'react-router-dom';
-import NavBar from './components/NavBar/navBar';
-import Home from './pages/Home/home';
-import AboutUs from './pages/AboutUs/about-us';
-import Features from './pages/Features/features';
-import Contact from './pages/Contact/contact';
-import Footer from './components/Footer/footer';
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages/Home/home";
+import Footer from "./components/Footer/footer";
+import Browse from "./pages/Browse/browse";
+import Login from "./pages/Login/login";
+import Register from "./pages/Register/register";
 
 const App = () => {
   return (
     <>
-      <NavBar />
       <Switch>
-        <Route path='/about' component={AboutUs} />
-        <Route path='/features' component={Features} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/' component={Home} />
+        <Route path="/browse" component={Browse} />
+        <Route path='/login' component={Login} /> 
+        <Route path='/register' component={Register} />
+        <Route path="/" component={Home} />
       </Switch>
       <Footer />
     </>
   );
-}
+};
 
 export default App;

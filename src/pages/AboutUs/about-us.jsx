@@ -5,7 +5,7 @@ import aboutUsImg from '../../images/homeImg4.jfif';
 class AboutUs extends Component {
     render() { 
         return (
-            <div className="container">
+            <div className="container" id="about">
                 <div className="row about-us">
                     <div className="col-sm-10 col-lg-5 order-sm-2 order-lg-1 my-5">
                         <img className='about-us-image' src={aboutUsImg} alt="about-us-image" />

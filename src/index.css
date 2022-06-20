@@ -6,4 +6,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Mulish', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
