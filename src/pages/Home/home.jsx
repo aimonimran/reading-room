@@ -4,7 +4,7 @@ import Features from "../Features/features";
 import Contact from "./../Contact/contact";
 import "./home.css";
 import NavBar from "../../components/NavBar/navBar";
-import Header from "./Header/header";
+import Header from "../Header/header";
 
 class Home extends Component {
   render() {

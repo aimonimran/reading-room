@@ -4,12 +4,12 @@
 
 .container {
     margin: 40px 0 -20px 0;
-    /* background-color: black; */
+    height: 100vh;
 }
 
 .about-us-image {
     width: 400px;
-    border: 7px solid #408000;
+    border: 9px solid #408000;
     transition: 0.5s;
 }
 
@@ -22,4 +22,11 @@
 .about-us-paragraph-one, .about-us-paragraph-two  {
     font-size: 20px;
     color: rgb(103, 101, 101);
+}
+
+/* ----------MEDIA QUERIES (MEDIUM DEVICES)---------- */
+@media screen and (max-width: 1024px) {
+    .container {
+        height: 130vh;
+    }
 }

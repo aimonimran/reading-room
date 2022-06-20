@@ -1,7 +1,7 @@
 .header {
     min-height: 120vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url("../../images/homeImg.jpg") center/cover no-repeat fixed;
+      url("../../images/home.jpg") center/cover no-repeat fixed;
     position: relative;
     overflow-x: hidden; 
     display: flex;

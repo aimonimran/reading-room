@@ -1,8 +1,13 @@
 import reading from '../images/reading.jpeg';
+import genres from '../images/select-genres.jpg';
+import bookmark from '../images/bookmark.jpg';
+import review from '../images/writing-review.jpg';
+import chat from '../images/chat.jpg';  
+import write from '../images/write.jfif';  
 
 const CardItems = [
     {
-        imgSrc: reading,
+        imgSrc: genres,
         title: "Select Genre",
         text: "Select multiple genres"
     },
@@ -12,22 +17,22 @@ const CardItems = [
         text: "Read anywhere, anytime"
     },
     {
-        imgSrc: reading,
+        imgSrc: bookmark,
         title: "Bookmark",
         text: "Bookmark favourite books"
     },
     {
-        imgSrc: reading,
+        imgSrc: review,
         title: "Write Review",
         text: "Drop a review"
     },
     {
-        imgSrc: reading,
+        imgSrc: chat,
         title: "Chat",
         text: "Chat with your friends"
     },
     {
-        imgSrc: reading,
+        imgSrc: write,
         title: "Write A Story",
         text: "Write a story"
     },
