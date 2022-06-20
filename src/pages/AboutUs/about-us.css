@@ -7,10 +7,13 @@
     height: 100vh;
 }
 
+.about-us-body {
+    margin-left: 1rem;
+}
+
 .about-us-image {
     width: 400px;
     border: 9px solid #408000;
-    transition: 0.5s;
 }
 
 .about-us-title {

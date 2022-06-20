@@ -1,7 +1,7 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navBar.css";
-import Features from './../../pages/Features/features';
+// import Features from "./../../pages/Features/features";
 
 const NavBar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -69,17 +69,17 @@ const NavBar = () => {
               features
             </a>
           </li>
-          {/* <li>
-            <a
-              href="/browse"
+          <li>
+            <NavLink
+              to="/browse"
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}
               className="nav-link"
             >
               browse
-            </a>
-          </li> */}
+            </NavLink>
+          </li>
           <li>
             <a
               href="#contact"
