@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CardItems from "./../../sampleData/cardData";
-import Card from "./../../components/common/Card/card";
 import "./features.css";
+import FeatureCard from "../../components/common/Card/featureCard";
 
 class Features extends Component {
   render() {
@@ -10,10 +10,9 @@ class Features extends Component {
         <div className="row features" id="features">
           <h1 className="features-title">Our Features</h1>
           <h3 className="features-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat.
           </h3>
           <div className="container-fluid mb-5">
             <div className="row">
@@ -21,7 +20,7 @@ class Features extends Component {
                 <div className="row gy-4">
                   {CardItems.map((val, ind) => {
                     return (
-                      <Card
+                      <FeatureCard
                         key={ind}
                         imgsrc={val.imgSrc}
                         title={val.title}

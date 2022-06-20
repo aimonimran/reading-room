@@ -6,7 +6,7 @@
     color: #408000;
     z-index: 2;
     cursor: pointer;
-    animation: bounce 3s ease infinite;
+    animation: bounce 2.5s ease infinite;
 }
 
 nav {
@@ -77,7 +77,7 @@ div {
       transform: scale(1);
     }
     50% {
-      transform: scale(1.5);
+      transform: scale(1.7);
     }
     100% {
       transform: scale(1);

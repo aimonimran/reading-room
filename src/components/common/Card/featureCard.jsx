@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
 
-const Card = ({ imgsrc, title, text }) => {
+const FeatureCard = ({ imgsrc, title, text }) => {
   return (
     <>
       <div className="col-md-4 col-10 mx-auto">
@@ -17,4 +17,4 @@ const Card = ({ imgsrc, title, text }) => {
   );
 };
 
-export default Card;
+export default FeatureCard;
