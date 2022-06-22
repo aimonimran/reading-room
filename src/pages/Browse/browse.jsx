@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import BookCard from "../../components/common/Card/bookCard";
+import BookCard from "../../components/common/BookCard/bookCard";
 import axios from "axios";
 import "./browse.css";
 
@@ -40,13 +40,13 @@ const Browse = () => {
       <div className="searching my-2">
         <input
           className="form-control searchbox"
-          placeholder="Search..."
+          placeholder="Search by title, author..."
           value={search}
           onChange={e => setSearch(e.target.value)}
           onKeyPress={searchBook}
         />
         <button 
-          className="btn"
+          className="btn-search"
           onClick={handleClick}
         >
           <i class="fa fa-search" />

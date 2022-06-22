@@ -33,7 +33,7 @@ input.searchbox {
   width: 25%;
 }
 
-button.btn {
+button.btn-search {
   margin-left: 20px;
   color: #fff;
   border: 2px solid #408000;
@@ -53,7 +53,7 @@ button.btn {
   align-items: center;
 }
 
-button.btn:hover {
+button.btn-search:hover {
   color: #fff;
   border: 2px solid rgb(27, 161, 60);
   background-color: rgb(27, 161, 60);
@@ -78,4 +78,15 @@ button.btn:hover {
   position: relative;
   transition: 0.5s;
   text-align: center;
+}
+
+/* ----------MEDIA QUERIES (SMALL DEVICES)---------- */
+@media screen and (max-width: 550px) {
+  input.searchbox {
+    width: 80%;
+  }
+
+  button.btn-search {
+    width: 20%;
+  }
 }

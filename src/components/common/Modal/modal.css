@@ -1,0 +1,119 @@
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay__inner {
+  background: white;
+  width: 700px;
+  height: 550px;
+  padding: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  overflow: scroll;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+}
+.overlay__inner .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  background-color: transparent;
+  color: #000;
+}
+.overlay__inner .inner__box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay__inner .inner__box h1 {
+  font-size: 30px;
+}
+.overlay__inner .inner__box img {
+  margin-right: 20px;
+  width: 150px;
+  height: 200px;
+}
+.overlay__inner .inner__box h3 {
+  margin-top: 10px;
+  color: rgb(90, 87, 87);
+  font-size: 15px;
+}
+.overlay__inner .inner__box h4 {
+  color: gray;
+  font-size: 10px;
+}
+
+.book-publish {
+    margin: 2px 0 2px 0;
+}
+
+.book-category {
+  margin: 2px 0 2px 0;
+}
+.overlay__inner .description {
+  margin-top: 2rem;
+  text-align: justify;
+  font-size: 13px;
+}
+button.btn-read-more {
+  outline: none;
+  border: none;
+  width: 20%;
+  border-radius: 0.5rem;
+  background-color: #24a0ed;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  font-size: 19px;
+  transition: all 0.4s ease;
+  margin-top: 0.6rem;
+}
+
+button.btn-read-more:hover {
+  background-color: #6dbff3;
+}
+
+/* ----------MEDIA QUERIES (SMALL DEVICES)---------- */
+@media screen and (max-width: 710px) {
+  .overlay__inner {
+    width: 600px;
+  }
+
+  button.btn-read-more {
+    width: 25%;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .overlay__inner {
+    width: 500px;
+  }
+
+  button.btn-read-more {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .overlay__inner {
+    width: 400px;
+  }
+
+  button.btn-read-more {
+    width: 35%;
+  }
+}

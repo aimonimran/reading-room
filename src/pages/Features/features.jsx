@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CardItems from "./../../sampleData/cardData";
 import "./features.css";
-import FeatureCard from "../../components/common/Card/featureCard";
+import FeatureCard from "../../components/common/FeatureCard/featureCard";
 
 class Features extends Component {
   render() {

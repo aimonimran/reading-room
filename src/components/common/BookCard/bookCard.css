@@ -1,0 +1,17 @@
+button.btn-read {
+    color: #fff;
+    background-color: #408000;
+    border: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+button.btn-read:hover {
+    background-color: #7bad49;
+}
+
+.card-para {
+    color: gray;
+}
