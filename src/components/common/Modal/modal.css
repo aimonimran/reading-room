@@ -56,13 +56,12 @@
   font-size: 10px;
 }
 
-.book-publish {
+.book-publisher,
+.book-category,
+.book-rating {
     margin: 2px 0 2px 0;
 }
 
-.book-category {
-  margin: 2px 0 2px 0;
-}
 .overlay__inner .description {
   margin-top: 2rem;
   text-align: justify;

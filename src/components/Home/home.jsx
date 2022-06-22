@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import NavBar from './../NavBar/navBar';
+import NavBar from "./../NavBar/navBar";
 import Header from "../../pages/Header/header";
-import AboutUs from './../../pages/AboutUs/about-us';
+import AboutUs from "./../../pages/AboutUs/about-us";
 import Features from "../../pages/Features/features";
-import Contact from './../../pages/Contact/contact';
+import Contact from "./../../pages/Contact/contact";
+import BookSlider from "../Slider/bookSlider";
 import "./home.css";
 
 class Home extends Component {
@@ -16,6 +17,9 @@ class Home extends Component {
         </div>
         <AboutUs />
         <Features />
+        <div>
+          <BookSlider />
+        </div>
         <Contact />
       </>
     );

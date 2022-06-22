@@ -8,12 +8,8 @@ class Features extends Component {
     return (
       <>
         <div className="row features" id="features">
+          <h5 className="features-subtitle">What We Offer</h5>
           <h1 className="features-title">Our Features</h1>
-          <h3 className="features-paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea commodo consequat.
-          </h3>
           <div className="container-fluid mb-5">
             <div className="row">
               <div className="col-8 mx-auto">

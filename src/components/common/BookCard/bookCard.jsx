@@ -17,10 +17,12 @@ const BookCard = ({ book }) => {
         let title = item.volumeInfo.title;
         let author = item.volumeInfo.authors;
         let description = item.volumeInfo.description;
+        let previewLink = item.volumeInfo.previewLink;
         if (
           thumbnail != undefined &&
           title != undefined &&
-          description != undefined
+          description != undefined &&
+          previewLink != undefined
         ) {
           return (
             <>

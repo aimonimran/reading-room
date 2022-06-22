@@ -20,9 +20,9 @@ const Modal = ({ show, item, onClose }) => {
             <div className="info">
               <h1>{item.volumeInfo.title}</h1>
               {item.volumeInfo.authors && <h3>Author: {item.volumeInfo.authors}</h3>}
-              <h4 className="book-publish">Published Date: {item.volumeInfo.publishedDate}</h4>
               {item.volumeInfo.categories && <h4 className="book-category">Category: {item.volumeInfo.categories}</h4>}
-              {item.volumeInfo.averageRating && <h4>Rating: {item.volumeInfo.averageRating}</h4>}
+              {item.volumeInfo.averageRating && <h4 className="book-rating">Rating: {item.volumeInfo.averageRating}</h4>}
+              <h4 className="book-publisher">Publisher: {item.volumeInfo.publisher}</h4>
             </div>
           </div>
           <h4 className="description">{item.volumeInfo.description}</h4>

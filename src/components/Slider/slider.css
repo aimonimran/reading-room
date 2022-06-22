@@ -1,0 +1,74 @@
+.carousel-header {
+    font-family: 'Lobster', cursive;
+    color: #408000;
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+
+.carousel-item { 
+    height: 22rem;
+    background: #e6ffe6;
+    color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    width: 80%;
+}
+
+.container {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 43rem;
+}
+
+.carousel-item img {
+    margin-left: 40%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.slider-subtitle {
+    margin-top: 60px; 
+    font-size: 15px;
+    color: rgb(156, 152, 152);
+    text-align: center;
+}
+
+/* ----------MEDIA QUERIES (MEDIUM DEVICES)---------- */
+@media screen and (max-width: 1024px) {
+    .container {
+        height: 50rem;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .carousel-item img {
+        margin-left: 37%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .carousel-item img {
+        margin-left: 32%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .carousel-item img {
+        margin-left: 29%;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .carousel-item img {
+        margin-left: 27%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carousel-item img {
+        margin-left: 25%;
+    }
+}

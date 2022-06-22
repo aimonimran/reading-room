@@ -19,10 +19,16 @@
 .about-us-title {
     font-family: 'Lobster', cursive;
     color: #408000; 
-    margin-top: 40px; 
+    margin-top: 10px; 
 } 
 
-.about-us-paragraph-one, .about-us-paragraph-two  {
+.about-us-subtitle {
+    margin-top: 50px; 
+    font-size: 15px;
+    color: rgb(156, 152, 152);
+}
+
+.about-us-paragraph-one  {
     font-size: 20px;
     color: rgb(103, 101, 101);
 }
@@ -30,6 +36,6 @@
 /* ----------MEDIA QUERIES (MEDIUM DEVICES)---------- */
 @media screen and (max-width: 1024px) {
     .container {
-        height: 130vh;
+        height: 100vh;
     }
 }

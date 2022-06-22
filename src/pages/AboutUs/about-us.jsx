@@ -15,16 +15,15 @@ class AboutUs extends Component {
             />
           </div>
           <div className="col-sm-12 col-lg-6 order-sm-2 order-lg-1 about-us-body">
+            <h5 className="about-us-subtitle">Get To Know Us</h5>
             <h1 className="about-us-title">About Us</h1>
             <h3 className="about-us-paragraph-one my-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </h3>
-            <h3 className="about-us-paragraph-two">
-              Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam
+              Who says the digital revolution spells the death of the book?
+              Reading Room is an open-source storytelling platform that not only
+              provides you books to read but also allows your inner creative self to dump
+              ideas with a distinctly amazing vibe. It provides a safe forum to
+              people to put their writing abilities to test and receive honest
+              reviews on it.
             </h3>
           </div>
         </div>

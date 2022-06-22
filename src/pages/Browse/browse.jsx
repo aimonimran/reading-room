@@ -15,7 +15,7 @@ const Browse = () => {
         "https://www.googleapis.com/books/v1/volumes?q=" +
           search +
           "&key=AIzaSyCb543w8uO96Nu2DB8b8J_csIUTkc1NfIA" +
-          "&maxResults=20"
+          "&maxResults=30"
       )
       .then((res) => setBookData(res.data.items))
       .catch((err) => console.log(err))
