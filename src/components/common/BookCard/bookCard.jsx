@@ -6,11 +6,10 @@ const BookCard = ({ book }) => {
   const [show, setShow] = useState(false);
   const [bookItem, setBookItem] = useState();
 
-  console.log(book);
 
   return (
     <>
-      {book.map((item) => {
+      {book.map((item, index) => {
         let thumbnail =
           item.volumeInfo.imageLinks &&
           item.volumeInfo.imageLinks.smallThumbnail;
@@ -25,7 +24,7 @@ const BookCard = ({ book }) => {
           previewLink != undefined
         ) {
           return (
-            <>
+            <React.Fragment key={index}>
               <div
                 className="card"
                 onClick={() => {
@@ -45,7 +44,7 @@ const BookCard = ({ book }) => {
                 item={bookItem}
                 onClose={() => setShow(false)}
               />
-            </>
+            </React.Fragment>
           );
         }
       })}

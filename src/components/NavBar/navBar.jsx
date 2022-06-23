@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navBar.css";
 // import Features from "./../../pages/Features/features";
+import { ROUTE_NAMES } from './../../constants/Routes';
 
 const NavBar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -93,7 +94,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
-              to="/login"
+              to={ROUTE_NAMES.login}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}

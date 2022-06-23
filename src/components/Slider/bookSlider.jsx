@@ -26,9 +26,9 @@ class BookSlider extends Component {
                     </a>
                   </div>
                 </div>
-                {SliderItems.map((item) => {
+                {SliderItems.map((item, index) => {
                   return (
-                    <div className="carousel-item">
+                    <div key={index} className="carousel-item">
                       <div className="container">
                         <a href="/login">
                           <img src={item.img} alt="" />
