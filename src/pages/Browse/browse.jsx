@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import BookCard from "../../components/common/BookCard/bookCard";
+import { fetchBooksFromGoogle, ROUTE_NAMES } from "../../constants";
 import "./browse.css";
-import { getGoogleBooksApiKey, fetchBooksFromGoogle, ROUTE_NAMES } from "../../constants";
 
 const Browse = () => {
   const [search, setSearch] = useState("");
   const [bookData, setBookData] = useState([]);
+
   const callAPI = async () => {
-    // return  axios
-    //   .get(
-    //     "https://www.googleapis.com/books/v1/volumes?q=" +
-    //       search +
-    //       "&key=AIzaSyCb543w8uO96Nu2DB8b8J_csIUTkc1NfIA" +
-    //       "&maxResults=30"
-    //   )
-    //   .then((res) => setBookData(res.data.items))
-    //   .catch((err) => console.log(err))
-    // fetchBooksFromGoogle(search).then(res => {
-    //   console.log("THIS IS RES***********", res);
-    //   setBookData(res.data.items)
-    // }).catch(e => {
-    //   console.log("THIS IS ERROR*******", e)
-    // })
     try {
       const res = await fetchBooksFromGoogle(search);
       setBookData(res.data.items);

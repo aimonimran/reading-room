@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
-  top:0px;
+  top: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Mulish', sans-serif;

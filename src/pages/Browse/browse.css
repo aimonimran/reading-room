@@ -1,6 +1,5 @@
 .browse {
   background-color: #e6ffe6;
-  padding: 30px;
 }
 
 .browse-title {
@@ -17,6 +16,7 @@
   font-size: 2rem;
   text-decoration: none;
   transition: all 1s ease;
+  padding: 20px;
 }
 
 .logo:hover {

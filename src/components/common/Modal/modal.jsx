@@ -1,13 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import "./modal.css";
+import useAuth from './../../../context/auth/useAuth';
+import { toast } from 'react-toastify';
+import { Redirect } from "react-router-dom";
 
 const Modal = ({ show, item, onClose }) => {
+
+  const [redirect, setRedirect] = useState(false);
+  if (redirect) {
+    return <Redirect to='/login'/>;
+  }
+
+  const {authorised} = useAuth();
   if (!show) {
     return null;
   }
 
   let thumbnail =
     item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail;
+
+  const handleRedirection = (link) => {
+    if (authorised) {
+      window.open(link, "_blank");
+
+    }else{
+      toast.error("Please login first!");
+      setRedirect(true);
+    }
+  }
+
   return (
     <>
       <div className="overlay">
@@ -26,9 +47,11 @@ const Modal = ({ show, item, onClose }) => {
             </div>
           </div>
           <h4 className="description">{item.volumeInfo.description}</h4>
-          <a href={item.volumeInfo.previewLink}>
+
+          <a onClick={()=>handleRedirection(item.volumeInfo.previewLink)}>
             <button className="btn-read-more" target="__blank">Read More</button>
           </a>
+
         </div>
       </div>
     </>
