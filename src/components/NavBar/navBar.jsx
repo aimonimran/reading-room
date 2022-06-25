@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ROUTE_NAMES } from './../../constants';
 import "./navBar.css";
-// import Features from "./../../pages/Features/features";
-import { ROUTE_NAMES } from './../../constants/Routes';
 
 const NavBar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -38,7 +37,7 @@ const NavBar = () => {
         <ul className="nav-items">
           <li>
             <a
-              href="/home"
+              href={ROUTE_NAMES.home}
               exact
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
@@ -72,7 +71,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
-              to="/browse"
+              to={ROUTE_NAMES.browse}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}
@@ -105,7 +104,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
-              to="/register"
+              to={ROUTE_NAMES.register}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}

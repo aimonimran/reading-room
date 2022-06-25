@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { ROUTE_NAMES } from "../../constants";
 import gone from "../../images/then-she-was-gone.jfif";
 import "./slider.css";
 import SliderItems from "./sliderItems";
+// import { ROUTE_NAMES } from "./constants";
 
 class BookSlider extends Component {
   render() {
@@ -21,8 +23,8 @@ class BookSlider extends Component {
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <div className="container">
-                    <a href="/login">
-                      <img src={gone} alt="" />
+                    <a href={ROUTE_NAMES.login}>
+                      <img src={gone} alt="slider-image" />
                     </a>
                   </div>
                 </div>
@@ -30,8 +32,8 @@ class BookSlider extends Component {
                   return (
                     <div key={index} className="carousel-item">
                       <div className="container">
-                        <a href="/login">
-                          <img src={item.img} alt="" />
+                        <a href={ROUTE_NAMES.login}>
+                          <img src={item.img} alt="slider-image" />
                         </a>
                       </div>
                     </div>

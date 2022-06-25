@@ -6,7 +6,6 @@ const BookCard = ({ book }) => {
   const [show, setShow] = useState(false);
   const [bookItem, setBookItem] = useState();
 
-
   return (
     <>
       {book.map((item, index) => {

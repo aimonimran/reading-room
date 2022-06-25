@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import BookCard from "../../components/common/BookCard/bookCard";
 import "./browse.css";
-import { getGoogleBooksApiKey, fetchBooksFromGoogle } from "../../constants";
+import { getGoogleBooksApiKey, fetchBooksFromGoogle, ROUTE_NAMES } from "../../constants";
 
 const Browse = () => {
   const [search, setSearch] = useState("");
@@ -42,7 +42,7 @@ const Browse = () => {
 
   return (
     <div className="row browse">
-      <NavLink to="/" className="logo">
+      <NavLink to={ROUTE_NAMES.home} className="logo">
         Reading Room
       </NavLink>
       <h1 className="browse-title">Browse</h1>

@@ -9,7 +9,7 @@ class Header extends Component {
         <div className="row">
           <div className="col-10 mx-auto">
             <h1 className="header-body">Let's enter</h1>
-            <h1 className="header-title animated">
+            <h1 className="header-title">
               Reading<br />Room
             </h1>
           </div>
