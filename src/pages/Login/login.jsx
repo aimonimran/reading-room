@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { getBaseUrl, ROUTE_NAMES } from "../../constants";
+import { ROUTE_NAMES } from "../../constants";
 import "./login.css";
-import CustomInput from './../../components/CustomInput';
+import CustomInput from "./../../components/CustomInput";
 import useAuth from "../../context/auth/useAuth";
 
 const Login = () => {
-  const {loginApi} = useAuth();
+  const { loginApi } = useAuth();
   const [loginForm, setLoginForm] = useState({
     username: {
       fieldKey: "username",
@@ -16,11 +16,11 @@ const Login = () => {
     password: {
       fieldKey: "password",
       title: "Password",
-      value: ""
+      value: "",
     },
   });
   const handleOnChangeFieldValue = (fieldKey, value) => {
-    const cloneObject = {... loginForm};
+    const cloneObject = { ...loginForm };
     cloneObject[fieldKey].value = value;
     setLoginForm(cloneObject);
   };
@@ -28,12 +28,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     const apiPayload = {
       name: loginForm.username.value,
-      password: loginForm.password.value
-    }
+      password: loginForm.password.value,
+    };
     loginApi(apiPayload);
-  }
-
-
+  };
 
   return (
     <div className="row login">
@@ -44,20 +42,30 @@ const Login = () => {
       <h1 className="login-title">Login</h1>
 
       <form action="" className="register__form">
-      <CustomInput
-            title={loginForm.username.title}
-            fieldKey={loginForm.username.fieldKey}
-            handleOnChange={handleOnChangeFieldValue}
-          />
-          <CustomInput
-            title={loginForm.password.title}
-            fieldKey={loginForm.password.fieldKey}
-            handleOnChange={handleOnChangeFieldValue}
-            type="password"
-          />
-          
-          <button className="btn btn-register" type="button" onClick={handleSubmit}>Login</button>
-        </form>
+        <CustomInput
+          title={loginForm.username.title}
+          fieldKey={loginForm.username.fieldKey}
+          handleOnChange={handleOnChangeFieldValue}
+        />
+        <CustomInput
+          title={loginForm.password.title}
+          fieldKey={loginForm.password.fieldKey}
+          handleOnChange={handleOnChangeFieldValue}
+          type="password"
+        />
+
+        <p className="inner-text">
+          New here? <a href={ROUTE_NAMES.register} className="inner-inner-text">Register Now</a>
+        </p>
+
+        <button
+          className="btn btn-register"
+          type="button"
+          onClick={handleSubmit}
+        >
+          Login
+        </button>
+      </form>
     </div>
   );
 };

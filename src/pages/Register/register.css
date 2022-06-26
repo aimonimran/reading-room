@@ -24,11 +24,25 @@ form.register__form {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.inner-text {
+    color: gray;
+}
+
+.inner-inner-text {
+    text-decoration: none;
+    color: #408000;
+}
+
+.inner-inner-text:hover {
+    text-decoration: none;
+    color: #295100;
+}
+
 button.btn.btn-register {
     border-radius: 1.5rem;
     background-color: #408000;
     color: #e6ffe6;
-    margin-top: 0.7rem;
+    margin-top: 0.2rem;
     width: 20%;
     display: flex;
     justify-content: center;

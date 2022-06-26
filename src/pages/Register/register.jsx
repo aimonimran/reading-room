@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 import CustomInput from "../../components/CustomInput";
 import { ROUTE_NAMES } from "../../constants";
 import "./register.css";
-import useAuth from './../../context/auth/useAuth';
+import useAuth from "./../../context/auth/useAuth";
 
 const Register = () => {
-  const {registerApi} = useAuth();
+  const { registerApi } = useAuth();
 
   const [registerForm, setRegisterForm] = useState({
     username: {
@@ -22,7 +22,7 @@ const Register = () => {
   });
 
   const handleOnChangeFieldValue = (fieldKey, value) => {
-    const cloneObject = {... registerForm};
+    const cloneObject = { ...registerForm };
     cloneObject[fieldKey].value = value;
     setRegisterForm(cloneObject);
   };
@@ -31,12 +31,10 @@ const Register = () => {
     console.log(registerForm);
     const apiPayload = {
       name: registerForm.username.value,
-      password: registerForm.password.value
-    }
+      password: registerForm.password.value,
+    };
     registerApi(apiPayload);
-  }
-
- 
+  };
 
   return (
     <>
@@ -60,7 +58,17 @@ const Register = () => {
             type="password"
           />
 
-          <button className="btn btn-register" type="button" onClick={handleSubmit}>Register</button>
+          <p className="inner-text">
+            Already have an account? <a href={ROUTE_NAMES.login} className="inner-inner-text">Login</a>
+          </p>
+
+          <button
+            className="btn btn-register"
+            type="button"
+            onClick={handleSubmit}
+          >
+            Register
+          </button>
         </form>
       </div>
     </>

@@ -5,13 +5,14 @@ import { toast } from 'react-toastify';
 import { Redirect } from "react-router-dom";
 
 const Modal = ({ show, item, onClose }) => {
-
   const [redirect, setRedirect] = useState(false);
+
   if (redirect) {
-    return <Redirect to='/login'/>;
+    return <Redirect to='/login' />;
   }
 
   const {authorised} = useAuth();
+
   if (!show) {
     return null;
   }
