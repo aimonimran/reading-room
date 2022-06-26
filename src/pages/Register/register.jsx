@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
 import CustomInput from "../../components/CustomInput";
 import { ROUTE_NAMES } from "../../constants";
 import "./register.css";
@@ -7,6 +7,8 @@ import useAuth from "./../../context/auth/useAuth";
 
 const Register = () => {
   const { registerApi } = useAuth();
+
+  const [redirect, setRedirect] = useState(false);
 
   const [registerForm, setRegisterForm] = useState({
     username: {
@@ -33,44 +35,51 @@ const Register = () => {
       name: registerForm.username.value,
       password: registerForm.password.value,
     };
-    registerApi(apiPayload);
+    registerApi(apiPayload).then(res => {
+      setRedirect(true);
+    })
   };
 
   return (
     <>
-      <div className="row register">
-        <NavLink to={ROUTE_NAMES.home} className="logo">
-          Reading Room
-        </NavLink>
+      {
+        redirect ?
+          <Redirect to={ROUTE_NAMES.browse} /> :
+          <div className="row register">
+            <NavLink to={ROUTE_NAMES.home} className="logo">
+              Reading Room
+            </NavLink>
 
-        <h1 className="register-title">Register</h1>
+            <h1 className="register-title">Register</h1>
 
-        <form action="" className="register__form">
-          <CustomInput
-            title={registerForm.username.title}
-            fieldKey={registerForm.username.fieldKey}
-            handleOnChange={handleOnChangeFieldValue}
-          />
-          <CustomInput
-            title={registerForm.password.title}
-            fieldKey={registerForm.password.fieldKey}
-            handleOnChange={handleOnChangeFieldValue}
-            type="password"
-          />
+            <form action="" className="register__form">
+              <CustomInput
+                title={registerForm.username.title}
+                fieldKey={registerForm.username.fieldKey}
+                handleOnChange={handleOnChangeFieldValue}
+              />
+              <CustomInput
+                title={registerForm.password.title}
+                fieldKey={registerForm.password.fieldKey}
+                handleOnChange={handleOnChangeFieldValue}
+                type="password"
+              />
 
-          <p className="inner-text">
-            Already have an account? <a href={ROUTE_NAMES.login} className="inner-inner-text">Login</a>
-          </p>
+              <p className="inner-text">
+                Already have an account? <a href={ROUTE_NAMES.login} className="inner-inner-text">Login</a>
+              </p>
 
-          <button
-            className="btn btn-register"
-            type="button"
-            onClick={handleSubmit}
-          >
-            Register
-          </button>
-        </form>
-      </div>
+              <button
+                className="btn btn-register"
+                type="button"
+                onClick={handleSubmit}
+              >
+                Register
+              </button>
+            </form>
+          </div>
+      }
+
     </>
   );
 };

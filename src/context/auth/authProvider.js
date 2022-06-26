@@ -15,30 +15,37 @@ const AuthProvider = ({ children }) => {
   }
 
   const registerApi = (payload) => {
-    axios.post(getBaseUrl("/users"), payload)
-    .then((res) => {
-      console.log(res);
-      setAuthorised(true);
-      setRedirect(true);
-      toast.success(res.data);
+    return new Promise((resolve, reject) => {
+      axios.post(getBaseUrl("/users"), payload)
+        .then((res) => {
+          console.log(res);
+          setAuthorised(true);
+          // setRedirect(true);
+          toast.success(res.data);
+          resolve(true);
+        })
+        .catch(e => {
+          console.log("error:", e)
+          toast.error(e.response.data);
+          reject(false)
+        });
     })
-    .catch(e=>{
-        console.log("error:",e)
-        toast.error(e.response.data);
-    });
   };
 
   const loginApi = (payload) => {
-    axios.post(getBaseUrl("/users/login"), payload)
-    .then((res) => {
-      console.log(res);
-      setAuthorised(true);
-      toast.success(res.data);
-      setRedirect(true);
-    })
-    .catch(e=>{
-        console.log("error:",e)
+    return new Promise((resolve, reject) => {
+      axios.post(getBaseUrl("/users/login"), payload)
+      .then((res) => {
+        console.log(res);
+        setAuthorised(true);
+        toast.success(res.data);
+        resolve(true);
+      })
+      .catch(e => {
+        console.log("error:", e)
         toast.error(e.response.data);
+        reject(false)
+      })
     })
   };
 
