@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { ROUTE_NAMES } from '../../constants';
 import useAuth from "../../context/auth/useAuth";
-import { ROUTE_NAMES } from './../../constants';
-import "./navBar.css";
 
-const NavBar = () => {
+const UserNavBar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const [showCross, setShowCross] = useState(true);
 
@@ -39,40 +38,6 @@ const NavBar = () => {
 
         <ul className="nav-items">
           <li>
-            <a
-              href={ROUTE_NAMES.home}
-              exact
-              onClick={() => {
-                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
-              }}
-              className="nav-link"
-            >
-              home
-            </a>
-          </li>
-          <li>
-            <a
-              href="#about"
-              onClick={() => {
-                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
-              }}
-              className="nav-link"
-            >
-              about
-            </a>
-          </li>
-          <li>
-            <a
-              href="#features"
-              onClick={() => {
-                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
-              }}
-              className="nav-link"
-            >
-              features
-            </a>
-          </li>
-          <li>
             <NavLink
               to={ROUTE_NAMES.browse}
               onClick={() => {
@@ -84,42 +49,55 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            <a
-              href="#contact"
-              onClick={() => {
-                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
-              }}
-              className="nav-link"
-            >
-              contact
-            </a>
-          </li>
-          <li>
             <NavLink
-              to={ROUTE_NAMES.login}
+              to={ROUTE_NAMES.genre}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}
               className="nav-link"
             >
-              login
+              select genre
             </NavLink>
           </li>
           <li>
             <NavLink
-              to={ROUTE_NAMES.register}
+              to={ROUTE_NAMES.genre}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}
               className="nav-link"
             >
-              register
+              write
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to={ROUTE_NAMES.genre}
+              onClick={() => {
+                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
+              }}
+              className="nav-link"
+            >
+              chat
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={ROUTE_NAMES.home}
+              onClick={() => {
+                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
+                authorised(false);
+              }}
+              className="nav-link"
+            >
+              logout
+            </NavLink>
+          </li>
+          
         </ul>
       </nav>
     </>
   );
 };
 
-export default NavBar;
+export default UserNavBar;

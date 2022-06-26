@@ -1,0 +1,26 @@
+.user__header {
+    background: #408000;
+    color: #fff;
+}
+
+.user__items {
+    display: flex;
+    padding: 1.4rem 0 0.4rem 1.5rem;
+}
+
+.user__item {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.user__item a {
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.user__item:hover, 
+.user__item a:hover {
+    color: rgb(196, 194, 194);
+    text-decoration: none;
+}

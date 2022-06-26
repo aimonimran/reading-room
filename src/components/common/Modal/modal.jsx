@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import "./modal.css";
 import useAuth from './../../../context/auth/useAuth';
 import { toast } from 'react-toastify';
 import { Redirect } from "react-router-dom";
+import "./modal.css";
 
 const Modal = ({ show, item, onClose }) => {
   const [redirect, setRedirect] = useState(false);
@@ -23,7 +23,6 @@ const Modal = ({ show, item, onClose }) => {
   const handleRedirection = (link) => {
     if (authorised) {
       window.open(link, "_blank");
-
     }else{
       toast.error("Please login first!");
       setRedirect(true);
@@ -44,7 +43,7 @@ const Modal = ({ show, item, onClose }) => {
               {item.volumeInfo.authors && <h3>Author: {item.volumeInfo.authors}</h3>}
               {item.volumeInfo.categories && <h4 className="book-category">Category: {item.volumeInfo.categories}</h4>}
               {item.volumeInfo.averageRating && <h4 className="book-rating">Rating: {item.volumeInfo.averageRating}</h4>}
-              <h4 className="book-publisher">Publisher: {item.volumeInfo.publisher}</h4>
+              {item.volumeInfo.publisher && <h4 className="book-publisher">Publisher: {item.volumeInfo.publisher}</h4>}
             </div>
           </div>
           <h4 className="description">{item.volumeInfo.description}</h4>

@@ -20,7 +20,6 @@ const AuthProvider = ({ children }) => {
         .then((res) => {
           console.log(res);
           setAuthorised(true);
-          // setRedirect(true);
           toast.success(res.data);
           resolve(true);
         })

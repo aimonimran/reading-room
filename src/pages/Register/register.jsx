@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { NavLink, Redirect } from "react-router-dom";
-import CustomInput from "../../components/CustomInput";
 import { ROUTE_NAMES } from "../../constants";
-import "./register.css";
 import useAuth from "./../../context/auth/useAuth";
+import CustomInput from "../../components/CustomInput";
+import "./register.css";
 
 const Register = () => {
   const { registerApi } = useAuth();

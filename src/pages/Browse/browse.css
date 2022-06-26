@@ -5,7 +5,13 @@
 .browse-title {
   font-family: "Lobster", cursive;
   color: #408000;
-  margin-top: 20px;
+  text-align: center;
+}
+
+h1.user-browse-title {
+  margin-top: 2rem;
+  font-family: "Lobster", cursive;
+  color: #408000;
   text-align: center;
 }
 
@@ -14,14 +20,13 @@
   color: #408000;
   margin-left: 5rem;
   font-size: 2rem;
-  text-decoration: none;
   transition: all 1s ease;
   padding: 20px;
+  text-decoration: underline;
 }
 
 .logo:hover {
   color: rgb(27, 161, 60);
-  text-decoration: none;
 }
 
 .searching {
@@ -90,4 +95,11 @@ button.btn-search:hover {
   button.btn-search {
     width: 20%;
   }
+}
+
+.anon__body {
+  color: #408000;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1.5rem 0;
+  font-weight: bold;
 }
