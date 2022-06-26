@@ -7,18 +7,20 @@ import useAuth from "../../context/auth/useAuth";
 
 const Login = () => {
   const { loginApi } = useAuth();
+
   const [loginForm, setLoginForm] = useState({
     username: {
       fieldKey: "username",
       title: "Username",
-      value: "",
+      value: ""
     },
     password: {
       fieldKey: "password",
       title: "Password",
-      value: "",
-    },
+      value: ""
+    }
   });
+
   const handleOnChangeFieldValue = (fieldKey, value) => {
     const cloneObject = { ...loginForm };
     cloneObject[fieldKey].value = value;
@@ -47,6 +49,7 @@ const Login = () => {
           fieldKey={loginForm.username.fieldKey}
           handleOnChange={handleOnChangeFieldValue}
         />
+
         <CustomInput
           title={loginForm.password.title}
           fieldKey={loginForm.password.fieldKey}

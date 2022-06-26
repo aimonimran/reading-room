@@ -10,10 +10,10 @@ const App = () => {
   return (
     <>
       <Switch>
-        <Route path={ROUTE_NAMES.browse} component={Browse} />
-        <Route path={ROUTE_NAMES.login} component={Login} /> 
+        <Route path={ROUTE_NAMES.browse} exact component={Browse} />
+        <Route path={ROUTE_NAMES.login} component={Login} />
         <Route path={ROUTE_NAMES.register} component={Register} />
-        <Route path={ROUTE_NAMES.home} component={Home} />
+        <Route path={ROUTE_NAMES.home} exact component={Home} />
       </Switch>
       <Footer />
     </>

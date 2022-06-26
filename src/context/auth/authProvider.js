@@ -2,17 +2,24 @@ import React from "react";
 import AuthContext from "./authContext";
 import { useState } from "react";
 import axios from "axios";
-import { getBaseUrl } from "../../constants";
+import { getBaseUrl, ROUTE_NAMES } from "../../constants";
 import { toast } from 'react-toastify';
+import { Redirect } from "react-router-dom";
 
 const AuthProvider = ({ children }) => {
   const [authorised, setAuthorised] = useState(false);
+
+  const [redirect, setRedirect] = useState(false);
+  if (redirect) {
+    return <Redirect to={ROUTE_NAMES.browse} />;
+  }
 
   const registerApi = (payload) => {
     axios.post(getBaseUrl("/users"), payload)
     .then((res) => {
       console.log(res);
       setAuthorised(true);
+      setRedirect(true);
       toast.success(res.data);
     })
     .catch(e=>{
@@ -27,6 +34,7 @@ const AuthProvider = ({ children }) => {
       console.log(res);
       setAuthorised(true);
       toast.success(res.data);
+      setRedirect(true);
     })
     .catch(e=>{
         console.log("error:",e)
