@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import useAuth from "../../context/auth/useAuth";
-import { ROUTE_NAMES } from './../../constants';
+import { ROUTE_NAMES } from "./../../constants";
 import "./navBar.css";
 
 const NavBar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
   const [showCross, setShowCross] = useState(true);
-
-  const {authorised} = useAuth();
 
   return (
     <>

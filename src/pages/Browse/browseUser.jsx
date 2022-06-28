@@ -21,7 +21,6 @@ const BrowseUser = () => {
 
   const searchBook = (e) => {
     if (e.key === "Enter") {
-      setApiCalled(true);
       callAPI();
     }
   };

@@ -4,7 +4,11 @@ import { toast } from 'react-toastify';
 import { Redirect } from "react-router-dom";
 import "./modal.css";
 
-const Modal = ({ show, item, onClose }) => {
+const Modal = ({ 
+  show, 
+  item, 
+  onClose 
+}) => {
   const [redirect, setRedirect] = useState(false);
 
   if (redirect) {

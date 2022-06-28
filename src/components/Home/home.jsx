@@ -7,23 +7,21 @@ import Contact from "./../../pages/Contact/contact";
 import BookSlider from "../Slider/bookSlider";
 import "./home.css";
 
-class Home extends Component {
-  render() {
-    return (
-      <>
-        <NavBar />
-        <div className="header" id="home">
-          <Header />
-        </div>
-        <AboutUs />
-        <Features />
-        <div>
-          <BookSlider />
-        </div>
-        <Contact />
-      </>
-    );
-  }
-}
+const Home = () => {
+  return (
+    <>
+      <NavBar />
+      <div className="header" id="home">
+        <Header />
+      </div>
+      <AboutUs />
+      <Features />
+      <div>
+        <BookSlider />
+      </div>
+      <Contact />
+    </>
+  );
+};
 
 export default Home;

@@ -6,13 +6,14 @@ class Form extends Component {
         e.preventDefault();
     };
 
-    renderInput = (label, name, placeholder, type = "text") => {
+    renderInput = (label, name, placeholder, type = "text", required="required") => {
         return (
             <Input 
                 label={label}
                 name={name}
                 type={type}
                 placeholder={placeholder}
+                required={required}
             />
         );
     } 

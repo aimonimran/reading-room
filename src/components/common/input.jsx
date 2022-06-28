@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Input = ({ label, name, ...rest}) => {
+const Input = ({ 
+    label, 
+    name, 
+    ...rest
+}) => {
     return (
         <div className="form-group my-2">
             <label htmlFor={name}>{label}</label>

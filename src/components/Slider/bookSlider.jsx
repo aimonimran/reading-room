@@ -3,11 +3,9 @@ import { ROUTE_NAMES } from "../../constants";
 import gone from "../../images/then-she-was-gone.jfif";
 import "./slider.css";
 import SliderItems from "./sliderItems";
-// import { ROUTE_NAMES } from "./constants";
 
-class BookSlider extends Component {
-  render() {
-    return (
+const BookSlider = () => {
+  return ( 
       <>
         <div className="container" id="about">
           <div className="row about-us">
@@ -68,8 +66,7 @@ class BookSlider extends Component {
           </div>
         </div>
       </>
-    );
-  }
+  );
 }
-
+ 
 export default BookSlider;

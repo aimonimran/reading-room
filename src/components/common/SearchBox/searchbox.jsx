@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Input from './../input';
 
-const SearchBox = ({name, type, placeholder, classname}) => {
+const SearchBox = ({
+    name, 
+    type, 
+    placeholder, 
+    classname
+}) => {
     return ( 
         <Input 
             name={name}

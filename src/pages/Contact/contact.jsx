@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import ContactForm from "./contactForm";
 import "./contact.css";
 
-class Contact extends Component {
-  render() {
-    return (
+const Contact = () => {
+  return ( 
       <div className="row contact" id="contact">
         <div className="socials col-lg-6 order-lg-1 col-sm-12 order-sm-1">
           <h6 className="contact-title mt-3">Address</h6>
@@ -20,8 +19,7 @@ class Contact extends Component {
           <ContactForm />
         </div>
       </div>
-    );
-  }
+   );
 }
-
+ 
 export default Contact;

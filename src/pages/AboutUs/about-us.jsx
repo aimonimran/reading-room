@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import "./about-us.css";
 import aboutUsImg from "../../images/about-us.jpg";
 
-class AboutUs extends Component {
-  render() {
-    return (
+const AboutUs = () => {
+  return ( 
       <div className="container" id="about">
         <div className="row about-us">
           <div className="col-sm-10 col-lg-5 order-sm-2 order-lg-1 my-5">
@@ -28,8 +27,7 @@ class AboutUs extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+   );
 }
-
+ 
 export default AboutUs;

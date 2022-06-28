@@ -1,10 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 
-class Header extends Component {
-  render() {
-    return (
+const Header = () => {
+  return ( 
       <>
         <div className="row">
           <div className="col-10 mx-auto">
@@ -20,8 +19,7 @@ class Header extends Component {
           </div>
         </div>
       </>
-    );
-  }
+   );
 }
-
+ 
 export default Header;
