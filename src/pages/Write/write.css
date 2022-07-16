@@ -1,0 +1,10 @@
+p.want-to-read {
+    color: gray;
+    margin-top: -15px;
+}
+
+@media screen and (max-width: 730px) {
+    input.form-control {
+        width: 100%;
+    }
+}

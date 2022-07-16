@@ -1,35 +1,47 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import { ROUTE_NAMES } from "../../constants";
+import axios from "axios";
 import UserNavBar from "../../components/UserNavBar/userNavBar";
+import "./write.css";
 
 const Write = () => {
   const [input, setInput] = useState({
     title: "",
     description: "",
+    story: "",
   });
 
   const handleChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
 
-    setInput(prevInput => {
-        return {
-            ...prevInput,
-            [name]: value
-        }
-    })
+    setInput((prevInput) => {
+      return {
+        ...prevInput,
+        [name]: value,
+      };
+    });
   };
 
   const handleClick = (e) => {
     const newStory = {
-        title: input.title,
-        description: input.description
-    }
-    axios.post('http://localhost:4000/write', newStory);
-}
+      title: input.title,
+      description: input.description,
+      story: input.story,
+    };
+    axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}${ROUTE_NAMES.write}`,
+      newStory
+    );
+    setInput({
+      title: "",
+      description: "",
+      story: "",
+    });
+  };
 
   return (
     <>
-    <div className="user__header">
+      <div className="user__header">
         <UserNavBar />
       </div>
       <div className="row features">
@@ -47,25 +59,48 @@ const Write = () => {
                       autoComplete="off"
                       className="form-control"
                       placeholder="Title"
+                      required
                     />
                   </div>
                   <div className="form-group">
-                    <textarea
+                    <input
                       name="description"
-                      rows="5"
                       onChange={handleChange}
                       value={input.description}
                       autoComplete="off"
                       className="form-control"
                       placeholder="Description"
+                      required
                     />
                   </div>
+                  <div className="form-group">
+                    <textarea
+                      name="story"
+                      rows="7"
+                      style={{ resize: "none" }}
+                      onChange={handleChange}
+                      value={input.story}
+                      autoComplete="off"
+                      className="form-control"
+                      placeholder="Story"
+                      required
+                    />
+                  </div>
+                  <p className="want-to-read">
+                    Want to read a story from a local author?
+                    <a
+                      href={ROUTE_NAMES.localauthors}
+                      className="inner-inner-text"
+                    >
+                      Read Now
+                    </a>
+                  </p>
                   <button
                     type="button"
                     onClick={handleClick}
                     className="btn btn-register"
                   >
-                    Save
+                    Publish
                   </button>
                 </form>
               </div>

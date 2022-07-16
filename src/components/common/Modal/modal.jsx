@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import useAuth from './../../../context/auth/useAuth';
 import { toast } from 'react-toastify';
 import { Redirect } from "react-router-dom";
+import { ROUTE_NAMES } from "../../../constants";
 import "./modal.css";
 
 const Modal = ({ 
@@ -12,7 +13,7 @@ const Modal = ({
   const [redirect, setRedirect] = useState(false);
 
   if (redirect) {
-    return <Redirect to='/login' />;
+    return <Redirect to={ROUTE_NAMES.login} />;
   }
 
   const {authorised} = useAuth();
