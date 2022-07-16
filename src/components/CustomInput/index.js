@@ -5,13 +5,13 @@ const CustomInput = ({
   type = "text",
   title = "",
   required = true,
-  handleOnChange
+  handleOnChange,
 }) => {
-    const onChange = e => {
-        if (handleOnChange) {
-            handleOnChange(fieldKey, e.target.value)
-        }
+  const onChange = (e) => {
+    if (handleOnChange) {
+      handleOnChange(fieldKey, e.target.value);
     }
+  };
   return (
     <>
       <label htmlFor={fieldKey}>
@@ -24,7 +24,7 @@ const CustomInput = ({
         id={fieldKey}
         name={fieldKey}
         required={required}
-        onChange = {onChange}
+        onChange={onChange}
       />
     </>
   );

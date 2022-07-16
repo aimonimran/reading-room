@@ -37,6 +37,17 @@ const UserNavBar = () => {
         </div>
 
         <ul className="nav-items">
+        <li>
+            <NavLink
+              to={ROUTE_NAMES.home}
+              onClick={() => {
+                setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
+              }}
+              className="nav-link"
+            >
+              home
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to={ROUTE_NAMES.browse}
@@ -61,7 +72,7 @@ const UserNavBar = () => {
           </li>
           <li>
             <NavLink
-              to={ROUTE_NAMES.genre}
+              to={ROUTE_NAMES.write}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}
@@ -72,13 +83,13 @@ const UserNavBar = () => {
           </li>
           <li>
             <NavLink
-              to={ROUTE_NAMES.genre}
+              to={ROUTE_NAMES.localauthors}
               onClick={() => {
                 setShowCross(!showCross), setShowMediaIcons(!showMediaIcons);
               }}
               className="nav-link"
             >
-              chat
+              local authors
             </NavLink>
           </li>
           <li>
