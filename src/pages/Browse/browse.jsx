@@ -6,6 +6,7 @@ import useAuth from "../../context/auth/useAuth";
 import BrowseAnonUser from "./browseAnonUser";
 import BrowseUser from "./browseUser";
 import "./browse.css";
+import AnonNavBar from "../../components/AnonNavBar/anonNavBar";
 
 const Browse = () => {
   const { authorised } = useAuth();
@@ -23,12 +24,18 @@ const Browse = () => {
         </>
       ) : (
         <>
+          <div className="user__header">
+            <AnonNavBar />
+          </div>
           <div className="row browse">
+            <BrowseAnonUser />
+          </div>
+          {/* <div className="row browse">
             <NavLink to={ROUTE_NAMES.home} className="logo">
               Reading Room
             </NavLink>
             <BrowseAnonUser />
-          </div>
+          </div> */}
         </>
       )}
     </>

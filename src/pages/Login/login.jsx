@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { NavLink, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { ROUTE_NAMES } from "../../constants";
 import CustomInput from "./../../components/CustomInput";
 import useAuth from "../../context/auth/useAuth";
+import AnonNavBar from "../../components/AnonNavBar/anonNavBar";
 import "./login.css";
 
 const Login = () => {
@@ -14,13 +15,13 @@ const Login = () => {
     username: {
       fieldKey: "username",
       title: "Username",
-      value: "",
+      value: ""
     },
     password: {
       fieldKey: "password",
       title: "Password",
-      value: "",
-    },
+      value: ""
+    }
   });
 
   const handleOnChangeFieldValue = (fieldKey, value) => {
@@ -45,9 +46,9 @@ const Login = () => {
         <Redirect to={ROUTE_NAMES.browse} />
       ) : (
         <div className="row login">
-          <NavLink to={ROUTE_NAMES.home} className="logo">
-            Reading Room
-          </NavLink>
+          <div className="user__header">
+            <AnonNavBar />
+          </div>
 
           <h1 className="login-title">Login</h1>
 

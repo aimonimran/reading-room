@@ -10,6 +10,10 @@
     padding-bottom: 2rem;
 }
 
+h1.register-title {
+    margin-top: 3rem;
+}
+
 form.register__form {
     width: 50%;
     border: transparent;
@@ -56,4 +60,16 @@ button.btn.btn-register:hover {
 
 input {
     margin-bottom: 0.6rem;
+}
+
+@media screen and (max-width: 750px) {
+    form.register__form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    button.btn.btn-register {
+        width: 40%;
+    }
 }

@@ -3,6 +3,7 @@ import { ROUTE_NAMES } from "../../constants";
 import axios from "axios";
 import UserNavBar from "../../components/UserNavBar/userNavBar";
 import "./write.css";
+import { toast } from 'react-toastify';
 
 const Write = () => {
   const [input, setInput] = useState({
@@ -32,6 +33,7 @@ const Write = () => {
       `${process.env.REACT_APP_BACKEND_URL}${ROUTE_NAMES.write}`,
       newStory
     );
+    toast.success('Story published successfully!');
     setInput({
       title: "",
       description: "",
@@ -48,7 +50,7 @@ const Write = () => {
         <h1 className="features-title">Write A Story</h1>
         <div className="container-fluid mb-5">
           <div className="row">
-            <div className="col-8 mx-auto">
+            <div className="col-8 mx-auto inputs">
               <div className="row gy-4">
                 <form action="" className="save">
                   <div className="form-group">
@@ -91,7 +93,7 @@ const Write = () => {
                     <a
                       href={ROUTE_NAMES.localauthors}
                       className="inner-inner-text"
-                    >
+                    > 
                       Read Now
                     </a>
                   </p>

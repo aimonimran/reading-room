@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import AnonNavBar from "../../components/AnonNavBar/anonNavBar";
 import BookCard from "../../components/common/BookCard/bookCard";
 import FeatureCard from "../../components/common/FeatureCard/featureCard";
 import { fetchBooksFromGoogle } from "../../constants";
@@ -46,7 +47,7 @@ const BrowseAnonUser = () => {
         </button>
       </div>
       <div className="browse__books">{<BookCard book={bookData} />}</div>
-      
+
       {!apiCalled && (
         <>
           <div className="top__searches">

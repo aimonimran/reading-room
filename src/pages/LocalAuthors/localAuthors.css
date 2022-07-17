@@ -46,6 +46,12 @@ p.want-to-write {
     margin-left: 2rem;
 }
 
+@media screen and (max-width: 870px) {
+  div.col-8.mx-auto {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 730px) {
   .story__title,
   .story__description {
@@ -57,3 +63,4 @@ p.want-to-write {
     margin-right: 0;
   }
 }
+

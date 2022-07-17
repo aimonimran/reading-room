@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { ROUTE_NAMES } from "./constants";
 import Home from "./components/Home/home";
@@ -18,8 +18,8 @@ const App = () => {
         <ProtectedRoute path={ROUTE_NAMES.write} component={Write} />
         <ProtectedRoute path={ROUTE_NAMES.genre} component={Genres} />
         <Route path={ROUTE_NAMES.browse} exact component={Browse} />
-        <Route path={ROUTE_NAMES.login} component={Login} />
-        <Route path={ROUTE_NAMES.register} component={Register} />
+        <Route path={ROUTE_NAMES.login} component={Login} authorised="true" />
+        <Route path={ROUTE_NAMES.register} component={Register} authorised="true" />
         <Route path={ROUTE_NAMES.home} exact component={Home} />
       </Switch>
       <Footer />
