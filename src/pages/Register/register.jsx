@@ -33,7 +33,8 @@ const Register = () => {
   const handleSubmit = (e) => {
     console.log(registerForm);
     const apiPayload = {
-      name: registerForm.username.value,
+      // name: registerForm.username.value,
+      username: registerForm.username.value,
       password: registerForm.password.value,
     };
     registerApi(apiPayload).then((res) => {

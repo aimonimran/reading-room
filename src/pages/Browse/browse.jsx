@@ -1,22 +1,23 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import UserNavBar from "../../components/UserNavBar/userNavBar";
-import { ROUTE_NAMES } from "../../constants";
+// import UserNavBar from "../../components/UserNavBar/userNavBar";
 import useAuth from "../../context/auth/useAuth";
 import BrowseAnonUser from "./browseAnonUser";
 import BrowseUser from "./browseUser";
 import "./browse.css";
 import AnonNavBar from "../../components/AnonNavBar/anonNavBar";
+import NavBar from "../../components/NavBar/navBar";
 
 const Browse = () => {
   const { authorised } = useAuth();
+
+  // console.log(authorised);
 
   return (
     <>
       {authorised ? (
         <>
           <div className="user__header">
-            <UserNavBar />
+            <NavBar />
           </div>
           <div className="row browse">
             <BrowseUser />
@@ -30,12 +31,6 @@ const Browse = () => {
           <div className="row browse">
             <BrowseAnonUser />
           </div>
-          {/* <div className="row browse">
-            <NavLink to={ROUTE_NAMES.home} className="logo">
-              Reading Room
-            </NavLink>
-            <BrowseAnonUser />
-          </div> */}
         </>
       )}
     </>

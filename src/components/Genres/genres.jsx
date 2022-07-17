@@ -3,7 +3,7 @@ import { fetchBooksFromGoogle } from "../../constants";
 import BookCard from "../common/BookCard/bookCard";
 import GenreCard from "../common/GenreCard/genreCard";
 import Loading from "../common/Loading/loading";
-import UserNavBar from "../UserNavBar/userNavBar";
+import NavBar from "../NavBar/navBar";
 import GenreData from "./genreData";
 
 const Genres = () => {
@@ -25,7 +25,7 @@ const Genres = () => {
   return (
     <>
       <div className="user__header">
-        <UserNavBar />
+        <NavBar />
       </div>
       <div className="row features" id="features">
         {apiCalled ? (

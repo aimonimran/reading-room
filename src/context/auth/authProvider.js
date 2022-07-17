@@ -3,7 +3,7 @@ import AuthContext from "./authContext";
 import { useState } from "react";
 import axios from "axios";
 import { getBaseUrl, ROUTE_NAMES } from "../../constants";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { Redirect } from "react-router-dom";
 
 const AuthProvider = ({ children }) => {
@@ -16,36 +16,38 @@ const AuthProvider = ({ children }) => {
 
   const registerApi = (payload) => {
     return new Promise((resolve, reject) => {
-      axios.post(getBaseUrl("/users"), payload)
+      axios
+        .post(getBaseUrl("/users"), payload)
         .then((res) => {
           console.log(res);
           setAuthorised(true);
           toast.success(res.data);
           resolve(true);
         })
-        .catch(e => {
-          console.log("error:", e)
+        .catch((e) => {
+          console.log("error:", e);
           toast.error(e.response.data);
-          reject(false)
+          reject(false);
         });
-    })
+    });
   };
 
   const loginApi = (payload) => {
     return new Promise((resolve, reject) => {
-      axios.post(getBaseUrl("/users/login"), payload)
-      .then((res) => {
-        console.log(res);
-        setAuthorised(true);
-        toast.success(res.data);
-        resolve(true);
-      })
-      .catch(e => {
-        console.log("error:", e)
-        toast.error(e.response.data);
-        reject(false)
-      })
-    })
+      axios
+        .post(getBaseUrl("/users/login"), payload)
+        .then((res) => {
+          console.log(res);
+          setAuthorised(true);
+          toast.success(res.data);
+          resolve(true);
+        })
+        .catch((e) => {
+          console.log("error:", e);
+          toast.error(e.response.data);
+          reject(false);
+        });
+    });
   };
 
   return (

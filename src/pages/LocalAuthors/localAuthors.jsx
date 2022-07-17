@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ROUTE_NAMES } from "../../constants";
-import UserNavBar from "../../components/UserNavBar/userNavBar";
 import "./localAuthors.css";
+import NavBar from "../../components/NavBar/navBar";
 
 const LocalAuthors = () => {
   const [narrative, setNarrative] = useState([
@@ -21,7 +21,7 @@ const LocalAuthors = () => {
   return (
     <>
       <div className="user__header">
-        <UserNavBar />
+        <NavBar />
       </div>
       <div className="row features">
         <h1 className="features-title">Read from our local authors</h1>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { ROUTE_NAMES } from "../../constants";
 import axios from "axios";
-import UserNavBar from "../../components/UserNavBar/userNavBar";
+import { toast } from "react-toastify";
+import NavBar from "../../components/NavBar/navBar";
 import "./write.css";
-import { toast } from 'react-toastify';
 
 const Write = () => {
   const [input, setInput] = useState({
@@ -11,6 +11,8 @@ const Write = () => {
     description: "",
     story: "",
   });
+
+  const authorised = true;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,7 +35,7 @@ const Write = () => {
       `${process.env.REACT_APP_BACKEND_URL}${ROUTE_NAMES.write}`,
       newStory
     );
-    toast.success('Story published successfully!');
+    toast.success("Story published successfully!");
     setInput({
       title: "",
       description: "",
@@ -44,7 +46,7 @@ const Write = () => {
   return (
     <>
       <div className="user__header">
-        <UserNavBar />
+        <NavBar />
       </div>
       <div className="row features">
         <h1 className="features-title">Write A Story</h1>
@@ -93,7 +95,7 @@ const Write = () => {
                     <a
                       href={ROUTE_NAMES.localauthors}
                       className="inner-inner-text"
-                    > 
+                    >
                       Read Now
                     </a>
                   </p>

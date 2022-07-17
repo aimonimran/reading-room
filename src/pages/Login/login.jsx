@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     const apiPayload = {
-      name: loginForm.username.value,
+      username: loginForm.username.value,
       password: loginForm.password.value,
     };
     loginApi(apiPayload).then((res) => {

@@ -14,12 +14,12 @@ const App = () => {
   return (
     <>
       <Switch>
-        <ProtectedRoute path={ROUTE_NAMES.localauthors} component={LocalAuthors} />
-        <ProtectedRoute path={ROUTE_NAMES.write} component={Write} />
-        <ProtectedRoute path={ROUTE_NAMES.genre} component={Genres} />
+        <Route path={ROUTE_NAMES.localauthors} component={LocalAuthors} />
+        <Route path={ROUTE_NAMES.write} component={Write} />
+        <Route path={ROUTE_NAMES.genre} component={Genres} />
         <Route path={ROUTE_NAMES.browse} exact component={Browse} />
-        <Route path={ROUTE_NAMES.login} component={Login} authorised="true" />
-        <Route path={ROUTE_NAMES.register} component={Register} authorised="true" />
+        <Route path={ROUTE_NAMES.login} component={Login} />
+        <Route path={ROUTE_NAMES.register} component={Register} />
         <Route path={ROUTE_NAMES.home} exact component={Home} />
       </Switch>
       <Footer />

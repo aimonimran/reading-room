@@ -3,11 +3,15 @@ import { fetchBooksFromGoogle } from "../../constants";
 import { LastRead } from "./anonData";
 import BookCard from "../../components/common/BookCard/bookCard";
 import FeatureCard from "./../../components/common/FeatureCard/featureCard";
+import useAuth from "../../context/auth/useAuth";
 
 const BrowseUser = () => {
   const [search, setSearch] = useState("");
   const [bookData, setBookData] = useState([]);
   const [apiCalled, setApiCalled] = useState(false);
+  const { authorised } = useAuth();
+
+  console.log(authorised);
 
   const callAPI = async () => {
     try {
