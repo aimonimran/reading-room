@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { ROUTE_NAMES } from "../../constants";
-import CustomInput from "./../../components/CustomInput";
 import useAuth from "../../context/auth/useAuth";
+import CustomInput from "./../../components/CustomInput";
 import AnonNavBar from "../../components/AnonNavBar/anonNavBar";
 import "./login.css";
 
@@ -35,6 +35,7 @@ const Login = () => {
       username: loginForm.username.value,
       password: loginForm.password.value,
     };
+
     loginApi(apiPayload).then((res) => {
       setRedirect(true);
     });
