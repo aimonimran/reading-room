@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+Live Project Link: https://astounding-tarsier-da1205.netlify.app/
+*Note: Only frontend of the application has been deployed. Therefore, you cannot access the components that are accessed after registering.*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Title 
+Reading Room
 
-## Available Scripts
+## Introduction
+An individual effort of creating a perfect spot for readers to assuage their desire for knowledge and entertainment that delivers purpose and enthusiasm. Not only does it allow users to 'read' published books from authors around the world, it also gives budding, local authors a chance to publicize their work with the help of the 'write' feature.
 
-In the project directory, you can run:
+For displaying books, Google Books API is hit. Axios is used for fetching data from the API using get request. When a user writes a story, it is written in MongoDB using mongoose library and published in real-time for other users to read. Registering and logging a user is done with the help of context API at frontend. For security of passwords, bcrypt and salting has been used.
 
-### `npm start`
+(Backend Repo: https://github.com/aimonimran/reading-room-backend)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies 
+1. HTML5
+2. CSS3
+3. Bootstrap
+4. JavaScript (ES6)
+5. React.js
+6. Axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Backend Technologies (In Backend Repo)
+1. Node.js
+2. Express.js
+3. MongoDB
+4. Mongoose
 
-### `npm test`
+## Functionalities
+1. User login
+2. Register new user
+3. Search book
+4. Select genre
+5. Read a book from famous author
+6. Write a story
+7. Read a book from local author
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Clone and run
+1. Open your terminal and then type. $ git clone {the url to the GitHub repo}. This clones the repo.
+2. cd into the new folder and type. $ npm install. This installs the required dependencies.
+3. To run the React project. $ npm start.
