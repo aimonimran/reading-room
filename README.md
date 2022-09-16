@@ -1,4 +1,5 @@
-Live Project Link: https://astounding-tarsier-da1205.netlify.app/
+## Live Project Link
+https://astounding-tarsier-da1205.netlify.app/
 *Note: Only frontend of the application has been deployed. Therefore, you cannot access the components that are accessed after registering.*
 
 ## Project Title 
